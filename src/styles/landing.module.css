@@ -1,0 +1,191 @@
+.introduce {
+    padding: 66px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introduce >div {
+    width: 448.22px;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 125%;
+}
+
+.trends {
+    margin-top: 75px;
+    padding: 91px 110px 38px 110px;
+}
+
+.trends >div:first-of-type {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 122%;
+    margin-bottom: 80px;
+}
+
+.trends >div:last-of-type {
+    margin-top: 39px;
+    display: flex;
+    justify-content: center;
+}
+
+.trendtable {
+    width: 100%;
+}
+
+.trendtable thead {
+    height: 56px;
+}
+
+.trendtable thead >th {
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #656C80;
+}
+
+.trendtable thead >th:first-of-type{
+    width: 25%;
+    padding-left: 30px;
+}
+
+.trendtable thead >th:last-of-type {
+    width: 25%;
+}
+
+.trendtable tbody >tr:nth-of-type(even) {
+    background: #F8F8F8;
+}
+
+.generations {
+    margin-top: 95px;
+    margin-bottom: 110px;
+    padding: 110px 100px 100px 100px;
+    background: #F8F8F8;
+}
+
+.generations >div:first-of-type {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 122%;
+    text-align: center;
+    color: #000F33;
+}
+
+.generations >div:nth-of-type(2) {
+    margin-top: 26px;
+    margin-bottom: 75px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #656C80;
+}
+
+.futurerow {
+    display: flex;
+    column-gap: 50px;
+    row-gap: 25px;
+    justify-content: center;
+}
+
+.getstarted {
+    margin-bottom: 111px;
+    padding-top: 123px;
+    padding-bottom: 123px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 45px;
+    background: #F8F8F8;
+}
+
+.getstarted >div {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 122%;
+    color: #000F33;
+}
+
+@media (max-width: 1024px) {
+    .introduce {
+        padding: 60px 0px 29px 0px;
+        text-align: center;
+        justify-content: center;
+    }
+    .introduce >img {
+        display: none;
+    }
+    .introduce >div {
+        width: 290px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .trends {
+        padding: 60px 20px 0 30px;
+        margin-top: 0;
+    }
+    .trends >div:first-of-type {
+        font-size: 25px;
+        line-height: 122%;
+        text-align: center;
+    }
+    .trends >div:last-of-type {
+        margin-top: 18px;
+    }
+    .trends >div:last-of-type button {
+        width: 100%;
+        height: 53px;
+    }
+    .trendtable thead >th {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .trendtable thead >th:first-of-type{
+        padding-left: 0;
+        width: 44%;
+    }
+    .trendtable thead >th:last-of-type {
+        display: none;
+    }
+    .trendtable tbody >tr:nth-of-type(even) {
+        background: white;
+    }
+    .generations {
+        margin-top: 55px;
+        margin-bottom: 52px;
+        padding: 60px 25px 50px 25px;
+    }
+    .generations >div:first-of-type {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 122%;
+    }
+    .generations >div:nth-of-type(2) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #656C80;
+    }
+    .futurerow {
+        flex-direction: column;
+    }
+    .getstarted {
+        margin-bottom: 59px;
+        padding: 60px 25px 40px 25px;
+    }
+    .getstarted >div {
+        text-align: center;
+        max-width: 290px;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 122%;
+    }
+    .getstarted >button {
+        width: 100%;
+    }
+}

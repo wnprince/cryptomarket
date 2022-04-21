@@ -1,0 +1,39 @@
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding-left: 70.84px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 130px 42.32px 100px;
+}
+
+.footer >div {
+    display: flex;
+    column-gap: 89.25px;
+    row-gap: 38px;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        height: 79px;
+        padding-left: 20.66px;
+    }
+    .header >img {
+        width: 156.77px;
+    }
+    .footer {
+        flex-direction: column;
+        padding: 50px 25px 40.84px 25px;
+    }
+    .footer >img {
+        margin-bottom: 105px;
+    }
+    .footer >div {
+        flex-direction: column;
+    }
+}
