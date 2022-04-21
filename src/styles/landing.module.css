@@ -38,7 +38,7 @@
     height: 56px;
 }
 
-.trendtable thead >th {
+.trendtable thead >tr >th {
     text-align: left;
     font-weight: 400;
     font-size: 16px;
@@ -46,12 +46,12 @@
     color: #656C80;
 }
 
-.trendtable thead >th:first-of-type{
+.trendtable thead >tr >th:first-of-type{
     width: 25%;
     padding-left: 30px;
 }
 
-.trendtable thead >th:last-of-type {
+.trendtable thead >tr >th:last-of-type {
     width: 25%;
 }
 
@@ -140,18 +140,18 @@
         width: 100%;
         height: 53px;
     }
-    .trendtable thead >th {
+    .trendtable thead >tr >th {
         font-size: 14px;
         line-height: 21px;
     }
-    .trendtable thead >th:first-of-type{
+    .trendtable thead >tr >th:first-of-type{
         padding-left: 0;
         width: 44%;
     }
-    .trendtable thead >th:last-of-type {
+    .trendtable thead >tr >th:last-of-type {
         display: none;
     }
-    .trendtable tbody >tr:nth-of-type(even) {
+    .trendtable tbody >tr >tr:nth-of-type(even) {
         background: white;
     }
     .generations {

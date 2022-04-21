@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import MarketTrends from './MarketTrends'
 import NextGenerations from './NextGenerations'
@@ -7,6 +7,7 @@ import PhoneImg from '../assets/images/phone.png'
 import styles from '../styles/landing.module.css'
 
 const Landing: React.FC = () => {
+  const [expanded, setExpanded] = useState(false)
   return (
     <div>
       <div className={styles.introduce}>
@@ -15,9 +16,9 @@ const Landing: React.FC = () => {
       </div>
       <div className={styles.trends}>
         <div>Market trends</div>
-        <MarketTrends />
+        <MarketTrends expanded={expanded} />
         <div>
-          <Button>More</Button>
+          <Button onClick={() => setExpanded(!expanded)}>{expanded ? 'Less' : 'More'}</Button>
         </div>
       </div>
       <NextGenerations />

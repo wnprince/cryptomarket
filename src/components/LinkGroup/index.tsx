@@ -13,7 +13,7 @@ const LinkGroup: React.FC<Props> = (props) => {
     return (
         <div className={styles.linkgroup}>
             <div>{title}</div>
-            {_.map(links, (x: any) => <div>{x}</div>)}
+            {_.map(links, (x, i) => <div key={i}>{x}</div>)}
         </div>
     )
 }

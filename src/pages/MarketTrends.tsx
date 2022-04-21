@@ -5,17 +5,24 @@ import TrendRow from '../components/Row'
 import styles from '../styles/landing.module.css'
 import { marketTrends } from '../config'
 
-const MarketTrends: React.FC = () => {
+interface Props {
+  expanded: boolean
+}
+
+const MarketTrends: React.FC<Props> = (props) => {
+  const { expanded } = props
   return (
     <table className={styles.trendtable}>
       <thead>
-        <th>Name</th>
-        <th>Last Price</th>
-        <th>Change</th>
-        <th>Market cap</th>
+        <tr>
+          <th>Name</th>
+          <th>Last Price</th>
+          <th>Change</th>
+          <th>Market cap</th>
+        </tr>
       </thead>
       <tbody>
-        {_.map(marketTrends, x => <TrendRow {...x} />)}
+        {_.map(_.filter(marketTrends, (x, i) => !expanded ? (i <= 3) : true), (x, i) => <TrendRow key={i} {...x} />)}
       </tbody>
     </table>
   )
