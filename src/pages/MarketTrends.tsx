@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useMemo } from 'react'
+import axios from 'axios'
 import _ from 'lodash'
 
 import TrendRow from '../components/Row'
+import { marketTrends, MarketTrendsProps } from '../config'
 import styles from '../styles/landing.module.css'
-import { marketTrends } from '../config'
 
-interface Props {
-  expanded: boolean
-}
-
-const MarketTrends: React.FC<Props> = (props) => {
+const MarketTrends: React.FC<MarketTrendsProps> = (props) => {
   const { expanded } = props
+  useMemo(async () => {
+    // const res = await axios.get('https://api.coinlore.net/api/tickers', {
+    //   headers: {
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+    //     'Content-Type' : 'application/x-www-form-urlencoded',
+    //   }
+    // })
+    // console.log(res)
+  }, [])
   return (
     <table className={styles.trendtable}>
       <thead>

@@ -3,12 +3,9 @@ import PropTypes from 'prop-types'
 
 import Header from './Header'
 import Footer from './Footer'
+import { LayoutProps } from '../config'
 
-interface Props {
-    children?: any
-}
-
-const Layout: React.FC<Props> = (props) => {
+const Layout: React.FC<LayoutProps> = (props) => {
     const { children } = props
     return (
         <div>

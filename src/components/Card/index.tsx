@@ -1,13 +1,9 @@
 import React from 'react'
 
+import { CardProps } from '../../config'
 import styles from '../../styles/components.module.css'
 
-interface Props {
-    title: string
-    description: string
-}
-
-const Card: React.FC<Props> = (props) => {
+const Card: React.FC<CardProps> = (props) => {
     const { title, description } = props
     return (
         <div className={styles.card}>

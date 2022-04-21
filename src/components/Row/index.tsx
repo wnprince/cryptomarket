@@ -1,17 +1,10 @@
 import React from 'react'
 import classnames from 'classnames'
 
+import { TrendRowProps } from '../../config'
 import styles from '../../styles/components.module.css'
 
-interface Props {
-    name: string
-    symbol: string
-    lastPrice: string
-    marketcap: string
-    change: number
-}
-
-const Row: React.FC<Props> = (props) => {
+const Row: React.FC<TrendRowProps> = (props) => {
     const { name, symbol, lastPrice, marketcap, change } = props
     return (
         <tr className={styles.row}>

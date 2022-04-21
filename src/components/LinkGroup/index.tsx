@@ -1,14 +1,10 @@
 import React from 'react'
 import _ from 'lodash'
 
+import { LinkGroupProps } from '../../config'
 import styles from '../../styles/components.module.css'
 
-interface Props {
-    title: string
-    links: Array<string>
-}
-
-const LinkGroup: React.FC<Props> = (props) => {
+const LinkGroup: React.FC<LinkGroupProps> = (props) => {
     const { title, links } = props
     return (
         <div className={styles.linkgroup}>
