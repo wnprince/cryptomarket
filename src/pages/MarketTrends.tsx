@@ -11,7 +11,6 @@ const MarketTrends: React.FC<MarketTrendsProps> = (props) => {
   const [coinList, setCoinList] = useState([])
   useMemo(async () => {
     const res = await axios.get('https://api.coinlore.net/api/tickers')
-    console.log(res.data.data)
     setCoinList(res.data.data)
   }, [])
   return (
