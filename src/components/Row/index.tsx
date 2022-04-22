@@ -5,7 +5,7 @@ import { TrendRowProps } from '../../config'
 import styles from '../../styles/components.module.css'
 
 const Row: React.FC<TrendRowProps> = (props) => {
-    const { name, symbol, lastPrice, marketcap, change } = props
+    const { name, symbol, price_usd: lastPrice, market_cap_usd: marketcap, percent_change_1h: change } = props
     return (
         <tr className={styles.row}>
             <td>
@@ -13,9 +13,9 @@ const Row: React.FC<TrendRowProps> = (props) => {
                 <div>{name}</div>
                 <div>{symbol}</div>
             </td>
-            <td>{lastPrice}</td>
-            <td className={classnames(styles[change > 0 ? 'success' : 'error'])}>{change > 0 ? '+' : '-'}{change}%</td>
-            <td>{marketcap}</td>
+            <td>${parseFloat(lastPrice)}</td>
+            <td className={classnames(styles[parseFloat(change) > 0 ? 'success' : 'error'])}>{parseFloat(change) > 0 ? '+' : ''}{change}%</td>
+            <td>${parseFloat(marketcap)}</td>
         </tr>
     )
 }

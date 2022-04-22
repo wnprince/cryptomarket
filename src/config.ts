@@ -1,48 +1,3 @@
-export const marketTrends = [
-    {
-        name: 'Bitcoin',
-        symbol: 'BTC',
-        lastPrice: '$56,623.54',
-        marketcap: '$56,623.54',
-        change: 1.41,
-    },
-    {
-        name: 'Bitcoin',
-        symbol: 'BTC',
-        lastPrice: '$56,623.54',
-        marketcap: '$56,623.54',
-        change: 1.41,
-    },
-    {
-        name: 'Bitcoin',
-        symbol: 'BTC',
-        lastPrice: '$56,623.54',
-        marketcap: '$56,623.54',
-        change: 1.41,
-    },
-    {
-        name: 'Bitcoin',
-        symbol: 'BTC',
-        lastPrice: '$56,623.54',
-        marketcap: '$56,623.54',
-        change: 1.41,
-    },
-    {
-        name: 'Bitcoin',
-        symbol: 'BTC',
-        lastPrice: '$56,623.54',
-        marketcap: '$56,623.54',
-        change: 1.41,
-    },
-    {
-        name: 'Bitcoin',
-        symbol: 'BTC',
-        lastPrice: '$56,623.54',
-        marketcap: '$56,623.54',
-        change: 1.41,
-    },
-]
-
 export interface MarketTrendsProps {
     expanded?: boolean
 }
@@ -54,9 +9,9 @@ export interface LayoutProps {
 export interface TrendRowProps {
     name: string
     symbol: string
-    lastPrice: string
-    marketcap: string
-    change: number
+    price_usd: string
+    percent_change_1h: string
+    market_cap_usd: string
 }
 
 export interface LinkGroupProps {

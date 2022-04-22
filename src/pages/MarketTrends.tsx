@@ -1,22 +1,18 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import axios from 'axios'
 import _ from 'lodash'
 
 import TrendRow from '../components/Row'
-import { marketTrends, MarketTrendsProps } from '../config'
+import { MarketTrendsProps } from '../config'
 import styles from '../styles/landing.module.css'
 
 const MarketTrends: React.FC<MarketTrendsProps> = (props) => {
   const { expanded } = props
+  const [coinList, setCoinList] = useState([])
   useMemo(async () => {
-    // const res = await axios.get('https://api.coinlore.net/api/tickers', {
-    //   headers: {
-    //     'Access-Control-Allow-Origin': '*',
-    //     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    //     'Content-Type' : 'application/x-www-form-urlencoded',
-    //   }
-    // })
-    // console.log(res)
+    const res = await axios.get('https://api.coinlore.net/api/tickers')
+    console.log(res.data.data)
+    setCoinList(res.data.data)
   }, [])
   return (
     <table className={styles.trendtable}>
@@ -29,7 +25,7 @@ const MarketTrends: React.FC<MarketTrendsProps> = (props) => {
         </tr>
       </thead>
       <tbody>
-        {_.map(_.filter(marketTrends, (x, i) => !expanded ? (i <= 3) : true), (x, i) => <TrendRow key={i} {...x} />)}
+        {_.map(_.filter(coinList, (x, i) => !expanded ? (i <= 3) : true), (x, i) => <TrendRow key={i} {...x} />)}
       </tbody>
     </table>
   )
